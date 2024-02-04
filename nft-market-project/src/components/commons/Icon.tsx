@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 import MintIcon from "@/assets/icons/mint.svg";
 import WalletIcon from "@/assets/icons/wallet.svg";
+import CloseIcon from "@/assets/icons/close.svg";
 
 import theme, { ColorType, FontSizeType } from "@/styles/theme";
 
-export type IconTypes = "mint" | "wallet";
+export type IconTypes = "mint" | "wallet" | "close";
 
 interface IProps {
   type: IconTypes;
@@ -20,6 +21,8 @@ const Icon = ({ type, height = "body3", color = "bg0" }: IProps) => {
         return <MintIcon />;
       case "wallet":
         return <WalletIcon />;
+      case "close":
+        return <CloseIcon />;
     }
   };
   console.log(renderIcon());

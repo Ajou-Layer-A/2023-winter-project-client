@@ -2,13 +2,26 @@
 
 import Button from "@/components/commons/Button";
 import Icon from "@/components/commons/Icon";
+import Input from "@/components/commons/Input";
+import Modal from "@/components/commons/Modal";
 import Text from "@/components/commons/Text";
 import TextButton from "@/components/commons/TextButton";
 import { useRouter } from "next/navigation";
 import { styled } from "styled-components";
 
 const Div = styled.div`
+  width: 300px;
   margin: 20px;
+`;
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const Sqaure = styled.div`
+  width: 300px;
+  height: 200px;
 `;
 export default function Home() {
   const router = useRouter();
@@ -17,7 +30,7 @@ export default function Home() {
     router.push("/test");
   };
   return (
-    <div>
+    <Container>
       <Text color="bg30" size="title1" $bold>
         Hello
       </Text>
@@ -40,7 +53,18 @@ export default function Home() {
         <Div>
           <Button type="tartiary" text="button2" icon="mint"></Button>
         </Div>
+        <Div>
+          <Input placeholder="text" info={{ message: "info message" }} />
+        </Div>
+        <Div>
+          <Input placeholder="text" error={{ message: "error message" }} />
+        </Div>
+        {/* <Modal>
+          <Sqaure>
+            <Text>Test Modal</Text>
+          </Sqaure>
+        </Modal> */}
       </div>
-    </div>
+    </Container>
   );
 }

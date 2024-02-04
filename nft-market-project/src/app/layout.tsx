@@ -1,4 +1,5 @@
-import StyledComponentsRegistry from "@/lib/styled-component-registry";
+import StyledComponentsRegistry from "@/lib/registry";
+import GlobalStyle from "@/styles/GlobalStyle";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
@@ -19,9 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={poppins.className}>
-      <StyledComponentsRegistry>
-        <body>{children}</body>
-      </StyledComponentsRegistry>
+      <body>
+        <StyledComponentsRegistry>
+          <GlobalStyle/>
+          {children}
+        </StyledComponentsRegistry>
+      </body>
     </html>
   );
 }

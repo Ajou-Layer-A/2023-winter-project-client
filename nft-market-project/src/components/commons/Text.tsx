@@ -1,3 +1,5 @@
+"use client";
+
 import React, { CSSProperties } from "react";
 import CSS from "csstype";
 import styled from "styled-components";
@@ -25,6 +27,8 @@ const Text = ({
   className = "",
   ...rest
 }: IProps) => {
+
+    console.log($bold)
   return (
     <StyledText
       className={className}

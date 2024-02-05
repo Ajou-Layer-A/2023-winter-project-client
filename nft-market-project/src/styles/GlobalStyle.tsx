@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
@@ -11,6 +11,7 @@ ${reset}
   body {
     background-color: ${theme.color["bg90"]};
   }
+
 `;
 
 export default GlobalStyle;

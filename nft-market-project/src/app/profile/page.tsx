@@ -1,12 +1,12 @@
 "use client";
 
 import Text from "@/components/commons/Text";
-import styled from "styled-components";
+import { styled } from "styled-components";
 
-export default function HomePage() {
+export default function ProfilePage() {
   return (
     <Container>
-      <Text>HomePage</Text>
+      <Text>ProfilePage</Text>
     </Container>
   );
 }

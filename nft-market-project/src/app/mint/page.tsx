@@ -3,10 +3,10 @@
 import Text from "@/components/commons/Text";
 import styled from "styled-components";
 
-export default function HomePage() {
+export default function MintPage() {
   return (
     <Container>
-      <Text>HomePage</Text>
+      <Text>MintPage</Text>
     </Container>
   );
 }

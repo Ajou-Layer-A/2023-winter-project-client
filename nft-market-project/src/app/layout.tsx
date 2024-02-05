@@ -1,5 +1,7 @@
+import GlobalHeader from "@/components/GlobalHeader";
+import GlobalNav from "@/components/GlobalNav";
+import RecoilRootProvider from "@/lib/recoilRootProvider";
 import StyledComponentsRegistry from "@/lib/registry";
-import GlobalStyle from "@/styles/GlobalStyle";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
@@ -21,10 +23,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={poppins.className}>
       <body>
-        <StyledComponentsRegistry>
-          <GlobalStyle/>
-          {children}
-        </StyledComponentsRegistry>
+        <RecoilRootProvider>
+          <StyledComponentsRegistry>
+            <GlobalHeader />
+            <GlobalNav />
+            {children}
+          </StyledComponentsRegistry>
+        </RecoilRootProvider>
       </body>
     </html>
   );

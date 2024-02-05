@@ -3,10 +3,12 @@ import styled from "styled-components";
 import MintIcon from "@/assets/icons/mint.svg";
 import WalletIcon from "@/assets/icons/wallet.svg";
 import CloseIcon from "@/assets/icons/close.svg";
+import CartIcon from "@/assets/icons/cart.svg";
+import StoreIcon from "@/assets/icons/store.svg";
 
 import theme, { ColorType, FontSizeType } from "@/styles/theme";
 
-export type IconTypes = "mint" | "wallet" | "close";
+export type IconTypes = "mint" | "wallet" | "close" | "cart" | "store";
 
 interface IProps {
   type: IconTypes;
@@ -23,6 +25,10 @@ const Icon = ({ type, height = "body3", color = "bg0" }: IProps) => {
         return <WalletIcon />;
       case "close":
         return <CloseIcon />;
+      case "cart":
+        return <CartIcon />;
+      case "store":
+        return <StoreIcon />;
     }
   };
   console.log(renderIcon());

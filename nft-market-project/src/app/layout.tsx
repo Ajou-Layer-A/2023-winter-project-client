@@ -4,6 +4,8 @@ import RecoilRootProvider from "@/lib/recoilRootProvider";
 import StyledComponentsRegistry from "@/lib/registry";
 import { Poppins } from "next/font/google";
 
+import styles from "@/styles/layout.module.css";
+
 const poppins = Poppins({
   weight: ["600", "500", "400"],
   subsets: ["latin"],
@@ -27,7 +29,7 @@ export default function RootLayout({
           <StyledComponentsRegistry>
             <GlobalHeader />
             <GlobalNav />
-            {children}
+            <div className={styles.page}>{children}</div>
           </StyledComponentsRegistry>
         </RecoilRootProvider>
       </body>

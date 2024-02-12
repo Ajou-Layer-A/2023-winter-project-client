@@ -57,7 +57,7 @@ const GlobalHeader = () => {
 const Container = styled.header`
   width: 100vw;
   display: flex;
-  background-color: transparent;
+  background-color: ${theme.color["bg90"]};
   justify-content: space-between;
   align-items: center;
   position: fixed;

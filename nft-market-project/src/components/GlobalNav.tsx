@@ -53,7 +53,6 @@ const Container = styled.nav<{ $pathName: string }>`
   justify-content: flex-start;
   align-items: center;
   position: fixed;
-  z-index: -1;
   border-right: 1px solid ${theme.color["bg50"]};
   gap: ${theme.space["base"]};
   background-color: ${theme.color["bg70"]};

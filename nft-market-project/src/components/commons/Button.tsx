@@ -10,7 +10,7 @@ import { IconTypes } from "./Icon";
 type ButtonSizeType = "large" | "medium" | "small";
 
 interface IProps {
-  text: string;
+  text?: string;
   type?: "primary" | "secondary" | "tartiary";
   size?: ButtonSizeType;
   icon?: IconTypes;

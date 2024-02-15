@@ -6,7 +6,8 @@ import theme from "@/styles/theme";
 interface IProps {
   onChange?: ChangeEventHandler<HTMLInputElement>;
   type?: React.HTMLInputTypeAttribute;
-  size?: "medium";
+  name?: string;
+  value?: string | number;
   error?: {
     message?: string;
   };
@@ -22,7 +23,8 @@ interface IProps {
 const Input = ({
   onChange,
   type = "text",
-  size = "medium",
+  name,
+  value,
   error = undefined,
   info = undefined,
   placeholder,
@@ -38,6 +40,8 @@ const Input = ({
           <StyledInput
             onChange={onChange}
             type={type}
+            name={name}
+            value={value}
             placeholder={placeholder}
             style={style}
           />

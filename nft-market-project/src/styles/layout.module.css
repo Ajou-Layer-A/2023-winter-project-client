@@ -1,5 +1,7 @@
-
-.page{
-    padding-left: 70px;
-    padding-top: 67px;
+.page {
+  padding-left: 70px;
+  padding-top: 67px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

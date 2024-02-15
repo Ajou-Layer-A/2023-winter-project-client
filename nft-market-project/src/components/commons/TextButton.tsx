@@ -9,7 +9,7 @@ import { IconTypes } from "./Icon";
 
 interface IProps {
   children?: React.ReactNode;
-  text: string;
+  text?: string;
   icon?: IconTypes;
   size?: "large" | "medium" | "small";
   disabled?: boolean;

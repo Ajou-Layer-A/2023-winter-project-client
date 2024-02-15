@@ -22,17 +22,17 @@ const GlobalNav = () => {
           router.push("/");
         }}
       >
-        <Image src="/images/logo.png" width={40} height={40} alt="logo image" />
+        <Icon type="logo" height="display" color="bg90" />
       </LogoWrapper>
       <Text color="bg10">Menu</Text>
       <ButtonWrapper>
-        <NavButton>
+        <NavButton onClick={() => router.push("/")}>
           <Icon type="store" height="title2" />
         </NavButton>
-        <NavButton>
+        <NavButton onClick={() => router.push("/mint")}>
           <Icon type="mint" height="title2" />
         </NavButton>
-        <NavButton>
+        <NavButton onClick={() => router.push("/profile")}>
           <Icon type="wallet" height="title2" />
         </NavButton>
       </ButtonWrapper>

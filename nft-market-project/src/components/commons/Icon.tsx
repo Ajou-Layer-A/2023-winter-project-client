@@ -5,10 +5,25 @@ import WalletIcon from "@/assets/icons/wallet.svg";
 import CloseIcon from "@/assets/icons/close.svg";
 import CartIcon from "@/assets/icons/cart.svg";
 import StoreIcon from "@/assets/icons/store.svg";
+import DoubleArrowIcon from "@/assets/icons/doubleArrow.svg";
+import PlusIcon from "@/assets/icons/plus.svg";
+import MinusIcon from "@/assets/icons/minus.svg";
+import LogoIcon from "@/assets/icons/logo.svg";
+import LeftIcon from "@/assets/icons/left.svg";
 
 import theme, { ColorType, FontSizeType } from "@/styles/theme";
 
-export type IconTypes = "mint" | "wallet" | "close" | "cart" | "store";
+export type IconTypes =
+  | "mint"
+  | "wallet"
+  | "close"
+  | "cart"
+  | "store"
+  | "doubleArrow"
+  | "plus"
+  | "minus"
+  | "logo"
+  | "left";
 
 interface IProps {
   type: IconTypes;
@@ -29,6 +44,16 @@ const Icon = ({ type, height = "body3", color = "bg0" }: IProps) => {
         return <CartIcon />;
       case "store":
         return <StoreIcon />;
+      case "doubleArrow":
+        return <DoubleArrowIcon />;
+      case "plus":
+        return <PlusIcon />;
+      case "minus":
+        return <MinusIcon />;
+      case "logo":
+        return <LogoIcon />;
+      case "left":
+        return <LeftIcon />;
     }
   };
   console.log(renderIcon());

@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "@/components/commons/Button";
+import Chip from "@/components/commons/Chip";
 import Icon from "@/components/commons/Icon";
 import Input from "@/components/commons/Input";
 import Modal from "@/components/commons/Modal";
@@ -11,7 +12,7 @@ import { styled } from "styled-components";
 
 const Div = styled.div`
   width: 300px;
-  margin: 20px;
+  margin: 60px;
 `;
 
 const Container = styled.div`
@@ -60,6 +61,9 @@ export default function HomePage() {
         </Div>
         <Div>
           <Input placeholder="text" error={{ message: "error message" }} />
+        </Div>
+        <Div>
+          <Chip>hello</Chip>
         </Div>
         {/* <Modal>
           <Sqaure>

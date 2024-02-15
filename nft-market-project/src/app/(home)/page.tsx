@@ -3,7 +3,7 @@
 import CollectionList from "@/components/CollectionList";
 import Input from "@/components/commons/Input";
 import Text from "@/components/commons/Text";
-import HomeMintHeader from "@/components/TapButtonHeader";
+import TapButtonHeader from "@/components/TapButtonHeader";
 import theme from "@/styles/theme";
 import styled from "styled-components";
 import items from "../../lib/mock.json";
@@ -13,16 +13,12 @@ const TABS = [
     id: 1,
     name: "Trending",
   },
-  {
-    id: 2,
-    name: "item",
-  },
 ];
 
 export default function HomePage() {
   return (
     <Container>
-      <HomeMintHeader TABS={TABS} />
+      <TapButtonHeader TABS={TABS} />
       <ContentsWrapper>
         <TextWrapper>
           <Text size="title2">Trending Collections</Text>

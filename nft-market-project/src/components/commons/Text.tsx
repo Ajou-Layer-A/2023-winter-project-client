@@ -27,8 +27,6 @@ const Text = ({
   className = "",
   ...rest
 }: IProps) => {
-
-    console.log($bold)
   return (
     <StyledText
       className={className}

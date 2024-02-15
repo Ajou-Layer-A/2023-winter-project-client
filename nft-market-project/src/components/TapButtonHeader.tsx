@@ -19,7 +19,7 @@ const TapButtonHeader = ({ TABS }: { TABS: IItem[] }) => {
         {TABS.map((TAB) => {
           return (
             <TabButton key={TAB.id}>
-              <Text size="body3" color="bg10">
+              <Text size="body3" color="bg40">
                 {TAB.name}
               </Text>
             </TabButton>
@@ -50,8 +50,16 @@ const TabButton = styled.button`
   width: fit-content;
   border: none;
   padding: ${theme.space["small"]} ${theme.space["base"]};
-  border-bottom: 3px solid ${theme.color["brandPurple30"]};
+  border-bottom: 3px solid ${theme.color["bg70"]};
   background-color: ${theme.color["transparent"]};
+
+  &:hover {
+    border-bottom: 3px solid ${theme.color["brandPurple30"]};
+    cursor: pointer;
+    span {
+      color: ${theme.color["bg10"]};
+    }
+  }
 `;
 
 export default TapButtonHeader;
